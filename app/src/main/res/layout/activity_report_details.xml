@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- AppBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#2E7D32"
+        android:paddingHorizontal="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Go back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Report Details"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:importantForAccessibility="no" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/llReportContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="18sp"
+                android:textColor="#757575"/>
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority"
+                android:textSize="18sp"
+                android:textColor="#757575"/>
+
+            <TextView
+                android:id="@+id/tvPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timestamp"
+                android:textSize="18sp"
+                android:textColor="#757575"/>
+
+            <TextView
+                android:id="@+id/tvTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="18sp"
+                android:textColor="#757575"/>
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incident Description"
+                android:textSize="18sp"
+                android:textColor="#757575"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                android:focusable="true"
+                android:screenReaderFocusable="true"
+                android:importantForAccessibility="yes" />
+
+            <!-- Photo -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvPhotoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivReportPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:focusable="true"
+                    android:screenReaderFocusable="true"
+                    android:contentDescription="Attached photo of the incident" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Audio -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlayAudio"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="Play Voice Note"
+                android:textSize="18sp"
+                app:icon="@android:drawable/ic_media_play"
+                app:iconSize="24dp"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                android:layout_marginBottom="24dp"
+                app:cornerRadius="16dp"
+                android:visibility="gone"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#1976D2"
+                app:strokeWidth="2dp"
+                android:textColor="#1976D2"
+                android:contentDescription="Play Voice Note" />
+
+            <!-- Actions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="32dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:text="EDIT REPORT"
+                    android:textSize="18sp"
+                    app:icon="@android:drawable/ic_menu_edit"
+                    app:iconSize="24dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:cornerRadius="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="Edit Report" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDeleteReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:text="DELETE REPORT"
+                    android:textSize="18sp"
+                    app:icon="@android:drawable/ic_menu_delete"
+                    app:iconSize="24dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:cornerRadius="16dp"
+                    app:backgroundTint="#D32F2F"
+                    android:contentDescription="Delete Report" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

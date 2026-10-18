@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme Colors -->
+    <color name="md_theme_light_primary">#2E6B34</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#B1F3B0</color>
+    <color name="md_theme_light_onPrimaryContainer">#002105</color>
+    
+    <color name="md_theme_light_secondary">#52634F</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#D5E8CE</color>
+    <color name="md_theme_light_onSecondaryContainer">#111F0F</color>
+    
+    <color name="md_theme_light_tertiary">#E27429</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#FFDBCA</color>
+    <color name="md_theme_light_onTertiaryContainer">#331200</color>
+    
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_background">#FDFDF5</color>
+    <color name="md_theme_light_onBackground">#1A1C19</color>
+    <color name="md_theme_light_surface">#FDFDF5</color>
+    <color name="md_theme_light_onSurface">#1A1C19</color>
+
+    <!-- Dark Theme Colors -->
+    <color name="md_theme_dark_primary">#95D696</color>
+    <color name="md_theme_dark_onPrimary">#003910</color>
+    <color name="md_theme_dark_primaryContainer">#12521F</color>
+    <color name="md_theme_dark_onPrimaryContainer">#B1F3B0</color>
+    
+    <color name="md_theme_dark_secondary">#B9CCB3</color>
+    <color name="md_theme_dark_onSecondary">#253423</color>
+    <color name="md_theme_dark_secondaryContainer">#3B4B38</color>
+    <color name="md_theme_dark_onSecondaryContainer">#D5E8CE</color>
+    
+    <color name="md_theme_dark_tertiary">#FFB693</color>
+    <color name="md_theme_dark_onTertiary">#4F2500</color>
+    <color name="md_theme_dark_tertiaryContainer">#713700</color>
+    <color name="md_theme_dark_onTertiaryContainer">#FFDBCA</color>
+    
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    <color name="md_theme_dark_background">#1A1C19</color>
+    <color name="md_theme_dark_onBackground">#E2E3DD</color>
+    <color name="md_theme_dark_surface">#1A1C19</color>
+    <color name="md_theme_dark_onSurface">#E2E3DD</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

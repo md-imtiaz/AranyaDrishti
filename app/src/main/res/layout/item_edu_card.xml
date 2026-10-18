@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivEduImage"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/tvWatermark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:paddingEnd="4dp"
+                android:paddingBottom="4dp"
+                android:text="Aranya Drishti - develop by Shuvo."
+                android:textColor="#CCFFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:shadowColor="#FF000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.5"
+                android:shadowRadius="3.0" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvEduTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="#2E7D32"
+                android:textStyle="bold"
+                tools:text="Protect the Wild" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvEduDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="#555555"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    tools:text="Learn about wildlife conservation and how you can help protect natural habitats." />
+
+                <ImageButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_share"
+                    app:tint="#2E7D32"
+                    android:contentDescription="Share fact" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

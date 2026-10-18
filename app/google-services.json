@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "351220690217",
+    "project_id": "aranya-drishti",
+    "storage_bucket": "aranya-drishti.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351220690217:android:a6b7d1bf442e90a6f69b38",
+        "android_client_info": {
+          "package_name": "com.shuvostechworld.aranyadrishti"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMxMkTm5c1fIkqFSXeRXmBRBHZDuHI1IQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

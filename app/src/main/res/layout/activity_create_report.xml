@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- AppBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#2E7D32"
+        android:paddingHorizontal="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Go back to Home dashboard" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="New Report"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:importantForAccessibility="no" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:clipToPadding="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incident Category"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="12dp"
+                android:labelFor="@+id/spinnerCategory"/>
+
+            <!-- FrameLayout to wrap spinner and give it a nice background/border -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/spinner_bg"
+                android:layout_marginBottom="32dp">
+                
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="48dp"
+                    android:paddingHorizontal="12dp"
+                    android:contentDescription="Select the type of report category. Double tap to change."
+                    android:background="@null" />
+                    
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:src="@android:drawable/arrow_down_float"
+                    app:tint="#757575"
+                    android:importantForAccessibility="no" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incident Priority"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="12dp"
+                android:labelFor="@+id/rgPriority"/>
+
+            <RadioGroup
+                android:id="@+id/rgPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp"
+                android:weightSum="3"
+                android:contentDescription="Select the incident priority level.">
+
+                <RadioButton
+                    android:id="@+id/rbHigh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="High"
+                    android:textSize="14sp"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="4dp"
+                    android:buttonTint="#D32F2F"
+                    android:textColor="#D32F2F"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:contentDescription="High priority"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Medium"
+                    android:textSize="14sp"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="4dp"
+                    android:buttonTint="#F57C00"
+                    android:textColor="#F57C00"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:contentDescription="Medium priority" />
+
+                <RadioButton
+                    android:id="@+id/rbLow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Low"
+                    android:textSize="14sp"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="4dp"
+                    android:buttonTint="#388E3C"
+                    android:textColor="#388E3C"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:contentDescription="Low priority" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Manual Location / Landmark (If GPS fails)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etManualLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="Enter manual location or landmark if GPS is inaccurate" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="Incident Description">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="3"
+                    android:inputType="textMultiLine|textAutoCorrect"
+                    android:imeOptions="actionDone"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="Type or use voice typing to provide a detailed description of the incident" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRecordVoice"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:text="Record Voice Note"
+                android:textSize="20sp"
+                app:icon="@android:drawable/ic_btn_speak_now"
+                app:iconSize="32dp"
+                app:iconGravity="textStart"
+                app:iconPadding="16dp"
+                android:layout_marginBottom="24dp"
+                app:cornerRadius="16dp"
+                android:minHeight="48dp"
+                android:backgroundTint="#1976D2"
+                android:contentDescription="Record a voice note to describe the situation. Primary input method." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPreviewVoice"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="Play / Preview Voice Note"
+                android:textSize="18sp"
+                app:icon="@android:drawable/ic_media_play"
+                app:iconSize="24dp"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                android:layout_marginBottom="24dp"
+                app:cornerRadius="16dp"
+                android:visibility="gone"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#388E3C"
+                app:strokeWidth="2dp"
+                android:textColor="#388E3C"
+                android:contentDescription="Play the recorded voice note to preview it" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTakePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:text="Take Photo"
+                android:textSize="20sp"
+                app:icon="@android:drawable/ic_menu_camera"
+                app:iconSize="32dp"
+                app:iconTint="#1976D2"
+                app:iconGravity="textStart"
+                app:iconPadding="16dp"
+                app:cornerRadius="16dp"
+                android:layout_marginBottom="32dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#1976D2"
+                app:strokeWidth="2dp"
+                android:textColor="#1976D2"
+                android:minHeight="48dp"
+                android:contentDescription="Take a photo as evidence" />
+
+            <!-- Spacer -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchAnonymous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Anonymously (Hide Identity)"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="Toggle to submit this report anonymously, hiding your identity." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your identity will be completely hidden from the authorities and public."
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="16dp"
+                android:importantForAccessibility="yes" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitReport"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:text="Submit Report"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:backgroundTint="#D32F2F"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="16dp"
+                android:minHeight="48dp"
+                android:contentDescription="Submit your completed report to the system. This will save offline and sync when possible."
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

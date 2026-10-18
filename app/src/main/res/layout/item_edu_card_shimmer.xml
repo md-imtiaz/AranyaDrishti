@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Shimmer placeholder for Image -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="#DDDDDD" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Shimmer placeholder for Title -->
+            <View
+                android:layout_width="150dp"
+                android:layout_height="24dp"
+                android:background="#DDDDDD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Shimmer placeholder for Description line 1 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="#DDDDDD" />
+                    
+                    <!-- Shimmer placeholder for Description line 2 -->
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#DDDDDD" />
+                </LinearLayout>
+
+                <!-- Shimmer placeholder for Share button -->
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="#DDDDDD" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
